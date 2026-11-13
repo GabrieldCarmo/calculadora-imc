@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 void main(){
@@ -38,9 +39,9 @@ class _HomeState extends State<Home> {
         _infoText = "Levemente acima do peso (${imc.toStringAsPrecision(4)})";
       }else if(imc >= 29.9 && imc < 34.9){
         _infoText = "Obesidade grau I (${imc.toStringAsPrecision(4)})";
-      }else if(imc >= 24.9 && imc < 39.9){
+      }else if(imc >= 34.9 && imc < 40.0){
         _infoText = "Obesidade grau II (${imc.toStringAsPrecision(4)})";
-      }else if(imc >= 40.0){
+      }else {
         _infoText = "Obesidade grau III (${imc.toStringAsPrecision(4)})";
       }
     });
@@ -50,7 +51,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Caculadora de IMC'),
+        title: Text('Calculadora de IMC'),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 5, 136, 243),
         actions: <Widget>[
